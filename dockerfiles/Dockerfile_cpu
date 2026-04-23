@@ -26,7 +26,7 @@ RUN $PIP_INSTALL -r requirements.txt
 WORKDIR /app
 COPY if_rest /app/if_rest
 COPY entrypoint.sh /app/entrypoint.sh
-
+COPY models /models
 
 ENTRYPOINT [ "bash" ]
 CMD ["entrypoint.sh"]
