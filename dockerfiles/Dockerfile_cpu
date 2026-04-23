@@ -24,9 +24,10 @@ COPY requirements.txt .
 RUN $PIP_INSTALL -r requirements.txt
 
 WORKDIR /app
+COPY models /models
+COPY misc/test_images /images/test_images   # NEW — fixes /health self-check
 COPY if_rest /app/if_rest
 COPY entrypoint.sh /app/entrypoint.sh
-COPY models /models
 
 ENTRYPOINT [ "bash" ]
 CMD ["entrypoint.sh"]
