@@ -16,10 +16,11 @@ scikit-image
 onnx==1.16.0
 onnxruntime==1.16.3
 onnx-simplifier
-git+https://github.com/lilohuang/PyTurboJPEG.git
+PyTurboJPEG<2
 exifread
 tritonclient[http,grpc]
 imageio
 aiohttp
 tenacity
 colorlog
+numpy<2
